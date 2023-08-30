@@ -78,7 +78,6 @@ class PeopleListProvider with ChangeNotifier {
     // Verifica se a pessoa existe na lista
     final index = _items.indexOf(person);
     if (index == -1) {
-      print("Pessoa nao consta");
       return "Pessoa não consta na lista";
     }
 
@@ -106,14 +105,12 @@ class PeopleListProvider with ChangeNotifier {
     }
 
     if (updated) {
-      print("Modificado");
       // Notifica mudanças para modificar as informações na tela de listagem
       notifyListeners();
       return null;
     }
 
     // Se não houve mudança, não fazer nada
-    print("Nao modificado.");
     return "Não houve mudanças nas informações da pessoa";
   }
 

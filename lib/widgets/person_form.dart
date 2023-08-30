@@ -159,37 +159,8 @@ class PersonForm extends StatelessWidget {
                   onPressed: () {
                     if (!createPerson.formKey.currentState!.validate()) return;
 
-                    /*
-                    // Se o campo person não é null, então é para editar
-                    String? resultado;
-                    if (createPerson.person != null) {
-                      // Envia informações para editar
-                      resultado = Provider.of<EstadoListaDePessoas>(context,
-                              listen: false)
-                          .editar(
-                        widget.person!,
-                        nome: nome,
-                        email: email,
-                        telefone: telefone,
-                        github: github,
-                        BloodType: BloodType,
-                      );
-                    } else {
-                      // Envia informações para incluir
-                      Provider.of<EstadoListaDePessoas>(context, listen: false)
-                          .incluir(Pessoa(
-                        nome: nome,
-                        email: email,
-                        telefone: telefone,
-                        github: github,
-                        BloodType: BloodType!,
-                      ));
-                    }
-                    */
-
                     // Caso os campos tenham valores válidos, retornar à rota
                     // anterior passando a pessoa como argumento
-                    print("Popping");
                     Navigator.of(context).pop({
                       "person": createPerson.person,
                       "name": createPerson.nameController.text,

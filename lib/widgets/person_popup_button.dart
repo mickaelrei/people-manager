@@ -30,7 +30,6 @@ class PersonPopupButton extends StatelessWidget {
         late String dialogText;
         late String? result;
         if (personData["person"] != null) {
-          print("Editing");
           result = peopleList.edit(
             personData["person"],
             name: personData["name"],
